@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  background-image: url('./components/images/link.jpg');
+  font-family: 'Titillium Web', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+} 

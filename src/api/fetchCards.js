@@ -6,7 +6,7 @@ const fetchCards = async () => {
   try {
     const response = await axios.get(URL);
   
-    const cards = response.data.slice(0, 10).map((card) => {
+    const cards = response.data.slice(0, 500).map((card) => {
       const strippedCard = {
         name: card.name,
         type: card.type,

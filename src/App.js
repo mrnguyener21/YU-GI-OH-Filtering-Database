@@ -1,6 +1,8 @@
 import React from 'react';
 import Cards from './components/Cards/Cards';
 
+import styles from './App.module.css';
+
 import fetchCards from './api/fetchCards.js';
 
 class App extends React.Component {

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(224, 224, 224);
+  padding: 0 2%;
+  width: 20%;
+  border: 2px black solid;
+
+}
+
+.image {
+  width: 300px;
+}
+.name{
+  border-bottom: black solid;
+
+}
+.type{
+  border-bottom: black solid;
+
+}
+.description{
+  text-align: center;
+}

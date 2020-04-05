@@ -1,16 +1,14 @@
 import React from 'react';
 import Card from './Card/Card';
 
-const Cards = (props)=> {
-    return(
-        <div>
-            {props.cards.map((card) => {
-                return (
-                    <Card card={card} />
-                );
-            })}
-        </div>
-    );
-}
+import styles from './Cards.module.css';
+
+const Cards = ({ cards }) => (
+    <div className={styles.container}>
+        {cards.map((card) => <Card card={card} />)}
+    </div>
+);
 
 export default Cards;
+
+
