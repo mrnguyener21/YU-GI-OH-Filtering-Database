@@ -1,6 +1,6 @@
 import React from 'react';
 import Cards from './components/Cards/Cards';
-
+import Search from './components/Search/SearchComponent';
 import styles from './App.module.css';
 
 import fetchCards from './api/fetchCards.js';
@@ -13,7 +13,7 @@ class App extends React.Component {
   async componentDidMount() {
     const data = await fetchCards(); 
     
-    this.setState({ cards: data }); 
+    this.setState({ cards: data } ); 
   }
   
   render() {
@@ -21,6 +21,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <Search />
         { cards.length === 0 ? null : <Cards cards={cards} /> }
       </div>
     )

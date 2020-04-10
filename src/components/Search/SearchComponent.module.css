@@ -1,0 +1,14 @@
+.container {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+h1{
+ color: white;   
+}
+input {
+    font-size: 1.5rem;
+}
