@@ -18,10 +18,18 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
+  "parser": "babel-eslint",
   plugins: [
     'react',
   ],
-  "rules": {
+  rules: {
+    'react/no-unescaped-entities':0,
+    'react/jsx-no-comment-textnodes':0,
+    'spaced-comment': 0,
+    "import/extensions": 0,
+    "react/prop-types": 0,
+    "linebreak-style": 0,
+    "react/state-in-constructor": 0,
     "import/prefer-default-export": 0,
     "max-len": [
       2,
