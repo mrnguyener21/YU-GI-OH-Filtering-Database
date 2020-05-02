@@ -1,12 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 * {
   box-sizing: border-box;
 } 
-
-.container {
-  background-image: url('./components/images/link.jpg');
-}

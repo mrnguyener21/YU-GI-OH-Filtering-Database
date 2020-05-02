@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/link.jpg'); 
+}
+
+.button {
+    margin: 50px 0;
+}
+
+.pageNumber {
+    color: white;
+    margin: 0 20px;
+}

@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+.select {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 400px;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.button {
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    outline: 0;
+}
+
+.cardType{
+    /* border: 2px solid yellow; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    
+}
+.monster{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+  
+.groupStyles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  };
+
+.groupBadgeStyles {
+    background-color: #EBECF0;
+    border-radius: 2em;
+    padding: 0.1em 0.5em;
+  };
+
+  .propertyInput {
+    width: 120px;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    border: none;
+  }
