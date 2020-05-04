@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RingLoader from "react-spinners/RingLoader";
 
 import { Cards, Search, Pagination } from './components';
 import styles from './App.module.css';
@@ -20,6 +21,18 @@ const App = () => {
   const numberOfPages = Math.ceil(cards.length / cardsPerPage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  if(!cards.length) {
+    return (
+      <div className={styles.loadingContainer}>
+        <RingLoader
+          size={400}
+          color={"#fff"}
+          loading={true}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>

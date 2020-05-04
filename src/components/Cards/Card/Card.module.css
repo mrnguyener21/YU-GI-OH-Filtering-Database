@@ -6,7 +6,7 @@
   padding: 0 2%;
   width: 20%;
   border: 2px black solid;
-  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
   background-image: url('../../../images/link.jpg'); 
     background-blend-mode: color;
 }

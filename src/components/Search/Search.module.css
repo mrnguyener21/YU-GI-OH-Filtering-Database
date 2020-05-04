@@ -1,10 +1,20 @@
 .container {
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg'); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
     display: flex;
-    flex-direction: column;
-    background: black;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 150px;
+}
+
+.containerContents {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 }
 
 .select {
@@ -22,10 +32,20 @@
     margin-bottom: 20px;
 }
 
+.mainInput {
+    width: 400px;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    border: none;
+}
+
 .button {
     border-radius: 0.2rem;
     padding: 0.5rem 1rem;
     outline: 0;
+    height: 40px;
 }
 
 .cardType{
