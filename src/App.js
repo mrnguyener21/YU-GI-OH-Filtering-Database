@@ -10,7 +10,7 @@ const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    (async () => setCards(await fetchCards()))();
+    (async () => setCards(await fetchCards({})))();
   }, []);
 
   const cardsPerPage = 10;
