@@ -28,9 +28,9 @@ const fetchCards = async ({ searchTerm, type, attribute, race, archetype, fromLe
     }));
 
     const filteredCards = cards
-      .filter((card) => fromAttack || toAttack ? (card.properties[0].value >= fromAttack) && (card.properties[0].value <=toAttack) : true)
-      .filter((card) => fromDefense || toDefense ? (card.properties[1].value >= fromDefense) && (card.properties[1].value <=toDefense) : true)
-      .filter((card) => fromLevel || toLevel ? (card.properties[2].value >= fromLevel) && (card.properties[2].value <= toLevel) : true)
+      .filter((card) => (fromAttack || toAttack) ? (card.properties[0].value >= fromAttack) && (card.properties[0].value <=toAttack) : true)
+      .filter((card) => (fromDefense || toDefense) ? (card.properties[1].value >= fromDefense) && (card.properties[1].value <=toDefense) : true)
+      .filter((card) => (fromLevel || toLevel) ? (card.properties[2].value >= fromLevel) && (card.properties[2].value <= toLevel) : true)
       
     if(sortOrder === 'asc') {
       filteredCards.reverse();

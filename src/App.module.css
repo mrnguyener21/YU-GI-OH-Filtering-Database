@@ -20,3 +20,16 @@ body {
   background-repeat: no-repeat; 
   background-size: cover; 
 }
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(119, 119, 119);
+}
