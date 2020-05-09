@@ -47,7 +47,7 @@ const Search = ({ setCards, setCurrentPage }) => {
       <div className={container}>
         <div className={containerContents}>
           <input className={mainInput} placeholder="Search..." value={searchTerm} onChange={(e) => setDetails({...details, searchTerm: e.target.value })}/>
-          <div>
+          <div className={styles.buttons}>
             <button className={button} type="button" onClick={handleClick}>Search</button>
             <button className={button} onClick={() => setIsModalOpen(true)}>More Filters</button>
           </div>
