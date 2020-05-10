@@ -1,6 +1,10 @@
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
+  background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg'); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
 }
 
 * {

@@ -5,10 +5,10 @@
   color: white;
   padding: 0 2%;
   width: 20%;
-  border: 2px black solid;
+  /* border: 2px black solid;  */
   background-color: rgba(0, 0, 0, 0.4) !important;
-  background-image: url('../../../images/link.jpg'); 
-  background-blend-mode: color;
+  /* background-image: url('../../../images/link.jpg');  */
+  /* background-blend-mode: color;  */
   height: 710px;
 }
 
@@ -21,6 +21,7 @@
     align-items: center;
     text-align: center;
     height: 50px;
+    border-bottom:2px solid white;
 }
 
 /* .type{
