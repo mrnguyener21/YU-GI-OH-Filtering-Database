@@ -5,7 +5,6 @@ body {
   background-position: center; 
   /* background-repeat: no-repeat;  */
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5) !important;
 
  
 }
@@ -15,6 +14,10 @@ body {
   box-sizing: border-box;
 } 
 
+.container{
+  background-color: rgba(0, 0, 0,0.5)
+
+}
 .loadingContainer {
   width: 100vw;
   height: 100vh;

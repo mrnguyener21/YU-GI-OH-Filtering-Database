@@ -5,8 +5,8 @@
   color: white;
   padding: 0 2%;
   width: 20%;
-  /* border: 2px black solid;  */
-  background-color: rgba(0, 0, 0, 0.4) !important;
+  border: 2px white solid; 
+  /* background-color: rgba(0, 0, 0, 0.4) !important; */
   /* background-image: url('../../../images/link.jpg');  */
   /* background-blend-mode: color;  */
   height: 710px;
@@ -37,15 +37,21 @@
   padding-top: 0;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .container {
         width: 100%;
     }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 501px) and (max-width: 800px) {
     .container {
         width: 50%;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
+    .container {
+        width: 30%;
+        margin-right: 3%;
     }
 }
 
