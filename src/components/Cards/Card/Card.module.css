@@ -5,10 +5,11 @@
   color: white;
   padding: 0 2%;
   width: 20%;
-  border: 2px white solid; 
-  /* background-color: rgba(0, 0, 0, 0.4) !important; */
+  border: 2px rgba(255, 255, 255, 0.7) solid; 
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg'); 
   /* background-image: url('../../../images/link.jpg');  */
-  /* background-blend-mode: color;  */
+  background-blend-mode: color; 
   height: 710px;
 }
 
@@ -21,19 +22,13 @@
     display: flex;
     align-items: center;
     text-align: center;
-    height: 50px;
-    border-bottom:2px solid white;
+    height: 100px;
 }
-
-/* .type{
-  border-bottom: black solid;
-} */
 
 .description{
   text-align: center;
   overflow: auto;
-  margin-top: 50px;
-  /* border: 2px solid white; */
+  height: 200px;
   padding-top: 0;
 }
 

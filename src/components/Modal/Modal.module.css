@@ -10,6 +10,7 @@
 .Modal {
     position: absolute;
     outline: none;
+    width: 30% !important;
     background-color:rgba(0,0,0,0.6);
     border: solid;
     border-color:rgba(0, 255, 255, 0.3);
@@ -20,6 +21,17 @@
     left: 50%;
     right: auto;
     bottom: auto;
-    margin-right: 50%;
+    /* margin-right: 50%; */
     transform: translate(-50%, -50%);
 }
+
+@media only screen and (max-width: 500px) {
+    .Modal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100% !important;
+        height: 100%;
+        padding-left: 27.5px;
+    }
+  }

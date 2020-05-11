@@ -1,16 +1,28 @@
 .propertyInput {
-    width: 125px;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 0.2rem;
     background-color: white;
     border: none;
+    margin-left: 5%;
   }
+
+  .propertyTitle {
+    margin: 0;
+    }
 
   .propertyContainer {
       display: flex;
-      width: 400px;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%;
+      padding-right: 20px;
+      /* justify-content: space-between; */
+      /* align-items: center; */
       margin-bottom: 20px;
   }
+
+  /* @media only screen and (max-width: 500px) {
+    .propertyContainer {
+        width: 100%;
+    }
+  } */
