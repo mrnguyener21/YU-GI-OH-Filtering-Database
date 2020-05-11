@@ -36,9 +36,11 @@ const Search = ({ setCards, setCurrentPage }) => {
         <Select className={select} placeholder="Select a monster card type" value={type} onChange={(type) => setDetails({...details, type })} options={data.typeOptions} />
         <Select className={select} placeholder="Select a race" value={race} onChange={(race) => setDetails({...details,race})} options={data.groupedOptions} formatGroupLabel={formatGroupLabel} />
         <Select className={select} placeholder="Select an archetype" value={archetype} onChange={(archetype) => setDetails({...details,archetype})} options={data.archetypeOptions} />
-        <RangeSelect fromValue={fromAttack} toValue={toAttack} label="Attack" setDetails={setDetails} details={details} />
-        <RangeSelect fromValue={fromDefense} toValue={toDefense} label="Defense" setDetails={setDetails} details={details} />
-        <RangeSelect fromValue={fromLevel} toValue={toLevel} label="Level" setDetails={setDetails} details={details} />
+        <div className={styles.range}>
+        <RangeSelect className={styles.range} fromValue={fromAttack} toValue={toAttack} label="Attack" setDetails={setDetails} details={details} />
+        <RangeSelect className={styles.range} fromValue={fromDefense} toValue={toDefense} label="Defense" setDetails={setDetails} details={details} />
+        <RangeSelect className={styles.range} fromValue={fromLevel} toValue={toLevel} label="Level" setDetails={setDetails} details={details} />
+        </div>
         <Select className={select} placeholder="Sort by" value={sortBy} onChange={(sortBy) => setDetails({...details, sortBy})} options={data.sortByOptions} />
         <Select className={select} placeholder="Sort by" value={sortOrder} onChange={(sortOrder) => setDetails({...details, sortOrder})} options={data.sortOrderOptions} />
         <button className={button} type="button" onClick={handleClick}>SEARCH</button>

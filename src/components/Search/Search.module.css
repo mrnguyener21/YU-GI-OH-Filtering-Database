@@ -1,10 +1,5 @@
 .container {
-    /* background-blend-mode: color; */
     background-color: rgba(0, 0, 0, 0.3) !important;
-    /* background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg');  */
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,13 +8,15 @@
 
 .containerContents {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 40%;
+    margin-left: 20%;
 }
 
 .select {
-    width: 400px;
-    margin-bottom: 20px;
+    width: 400px; 
+     margin-bottom: 20px;
+    padding-right: 20px;
 }
 
 .input {
@@ -36,9 +33,15 @@
     width: 400px;
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
+    margin-right: 4%;
     border-radius: 0.2rem;
-    background-color: white;
-    border: none;
+    background-color:rgba(0,0,0,0.1);
+    color: white;
+    border-bottom: 2px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline:none;
 }
 
 .button {
@@ -46,6 +49,12 @@
     padding: 0.5rem 1rem;
     outline: 0;
     height: 40px;
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+    border: solid;
+    border-color:rgba(0, 255, 255, 0.5);
+    margin-right: 10px;
+
 }
 
 .cardType{
@@ -60,7 +69,11 @@
     padding-left: 2%;
     padding-right: 2%;
 }
-  
+
+.range{
+    color: white;
+
+}
 .groupStyles {
     display: flex;
     align-items: center;

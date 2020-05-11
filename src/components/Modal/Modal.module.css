@@ -10,13 +10,16 @@
 .Modal {
     position: absolute;
     outline: none;
-    background-color: whitesmoke;
+    background-color:rgba(0,0,0,0.6);
+    border: solid;
+    border-color:rgba(0, 255, 255, 0.3);
+    /* color: white; */
     padding: 2%;
     border-radius: 15px;
     top: 50%;
     left: 50%;
     right: auto;
     bottom: auto;
-    margin-right: -50%;
+    margin-right: 50%;
     transform: translate(-50%, -50%);
 }
