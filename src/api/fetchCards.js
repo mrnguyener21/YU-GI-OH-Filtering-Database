@@ -38,6 +38,7 @@ const fetchCards = async ({ searchTerm, type, attribute, race, archetype, fromLe
 
     return filteredCards;
   } catch (error) {
+    console.log(error);
     return [];
   }
 };

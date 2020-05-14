@@ -1,11 +1,13 @@
 .Overlay {
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
 }
+
+/* https://www.npmjs.com/package/body-scroll-lock */
 
 .Modal {
     position: absolute;
@@ -14,7 +16,6 @@
     background-color:rgba(0,0,0,0.6);
     border: solid;
     border-color:rgba(0, 255, 255, 0.3);
-    /* color: white; */
     padding: 2%;
     border-radius: 15px;
     top: 50%;
@@ -23,6 +24,12 @@
     bottom: auto;
     /* margin-right: 50%; */
     transform: translate(-50%, -50%);
+    padding-left: 2.5%;
+}
+
+.Modal__Body--open,
+.Modal__Html--open {
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 500px) {
@@ -32,6 +39,6 @@
         justify-content: center;
         width: 100% !important;
         height: 100%;
-        padding-left: 27.5px;
+        padding-left: 27px;
     }
   }

@@ -8,7 +8,7 @@ const Card = ({ card: { name, type, description, image, isMonster, properties } 
     <img className={styles.image} src={image} alt={name} />
     { isMonster ? (
         <div className={styles.propertyContainer}>
-            {properties.map(({label, value}) => <h4 className={styles.property}>{label}: {value}</h4>) }
+            {properties.map(({label, value}, i) => <h4 key={i} className={styles.property}>{label}: {value}</h4>) }
         </div>
       ): null}
     <p className={styles.description}>{description}</p>

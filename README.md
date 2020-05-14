@@ -7,7 +7,13 @@ Potential Upgrades:
 -Add a clear filter option -->
 
 Fixes:
-- Modal on mobile (maybe on desktop)
+<!-- - add padding left to modal desktop -->
+<!-- - add filter button on modal -->
+<!-- - Go to top of the page when next page -->
+<!-- - increase paddings on container on mobile -->
+<!-- - increase paddings on description on mobile -->
+<!-- - style search and pagination -->
+<!-- - uneven number of cards -->
+<!-- added favicons and stuff -->
+- disable body scroll when modal open UNFIXED
 - Fix bug when typping gibberish
-- Go to top of the page when next page
-- increase paddings on description on mobile

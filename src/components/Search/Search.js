@@ -8,10 +8,10 @@ import fetchCards from '../../api/fetchCards.js';
 import data from '../../data';
 import styles from './Search.module.css';
 
-const Search = ({ setCards, setCurrentPage }) => {
-  const [details, setDetails] = useState({ searchTerm: '', type: '', attribute: '', race: '', archetype: '', fromLevel: '', toLevel: '', fromAttack: '', toAttack: '', fromDefense: '', toDefense: '', sortBy: '', sortOrder: '' });
+const Search = ({ setCards, setCurrentPage, searchTerm, setSearchTerm }) => {
+  const [details, setDetails] = useState({ type: '', attribute: '', race: '', archetype: '', fromLevel: '', toLevel: '', fromAttack: '', toAttack: '', fromDefense: '', toDefense: '', sortBy: '', sortOrder: '' });
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { searchTerm, type, attribute, race, archetype, fromLevel, toLevel, fromAttack, toAttack, fromDefense, toDefense, sortBy, sortOrder} = details;
+  const { type, attribute, race, archetype, fromLevel, toLevel, fromAttack, toAttack, fromDefense, toDefense, sortBy, sortOrder} = details;
   const { select, button, container, containerContents, mainInput } = styles;
   
   const formatGroupLabel = data => (
@@ -22,12 +22,16 @@ const Search = ({ setCards, setCurrentPage }) => {
   );
 
 
-  const onKeyPress = async (event) => {
+  const onKeyPress = (event) => {
     if (event.key === "Enter") {
-      setCards(await fetchCards(details));
-      setCurrentPage(1);
-      setIsModalOpen(false);
+      handleSubmit();
     }
+  }
+
+  const handleSubmit = async () => {
+    setCards(await fetchCards({ searchTerm, ...details }));
+    setCurrentPage(1);
+    setIsModalOpen(false);
   }
 
   return (
@@ -45,10 +49,12 @@ const Search = ({ setCards, setCurrentPage }) => {
         <Select className={select} placeholder="Sort by" value={sortBy} onChange={(sortBy) => setDetails({...details, sortBy})} options={data.sortByOptions} />
         <Select className={select} placeholder="Sort by" value={sortOrder} onChange={(sortOrder) => setDetails({...details, sortOrder})} options={data.sortOrderOptions} />
         <button className={button} onClick={() => setIsModalOpen(false)}>Close</button>
+        <button className={button} onClick={handleSubmit}>Filter</button>
       </Modal>
       <div className={container}>
         <div className={containerContents}>
-          <input className={mainInput} placeholder="Search..." value={searchTerm} onChange={(e) => setDetails({...details, searchTerm: e.target.value })} onKeyPress={onKeyPress} />
+          <input className={mainInput} placeholder="Search..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} onKeyPress={onKeyPress} />
+          <button className={button} onClick={handleSubmit}>Submit</button>
           <button className={button} onClick={() => setIsModalOpen(true)}>Filters</button>
         </div>
       </div>
