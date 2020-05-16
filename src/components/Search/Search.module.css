@@ -57,6 +57,42 @@
     border: solid;
     border-color:rgba(0, 255, 255, 0.5);
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.exitButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 105%;
+}
+.exitButton {
+    /* margin-top: 0; */
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    margin: 2% 0 2% 0;
+    outline: 0;
+    height: 40px;
+    background-color:rgba(0,0,0,0.8);
+    color: white;
+    border: solid;
+    border-color:rgba(0, 255, 255, 0.5);
+    cursor: pointer;
+}
+.modalButton {
+    border-radius: 0.2rem;
+    width: 97%;
+    outline: 0;
+    height: 40px;
+    background-color:rgba(0,0,0,0.8);
+    color:white;
+    border: solid;
+    border-color:rgba(0, 255, 255, 0.5);
+    margin-right: 10px;
+    font-size: large;
+    cursor: pointer;
+    margin-bottom:1%;
 }
 
 .cardType{

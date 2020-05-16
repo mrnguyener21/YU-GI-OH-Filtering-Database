@@ -38,11 +38,37 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
     setCurrentPage(1);
     setIsModalOpen(false);
     setHasSearched(true);
+    console.log(details.attribute)
   }
 
+  const handleClearFilter = () =>{
+    //can't seem to destructuring, is it just me?
+    details.attribute= '';
+    details.type= ''; 
+    details.race= ''; 
+    details.archetype= ''; 
+    details.fromLevel= ''; 
+    details.toLevel= ''; 
+    details.fromAttack= ''; 
+    details.toAttack= ''; 
+    details.fromDefense= ''; 
+    details.toDefense= '';
+    details.sortBy= ''; 
+    details.sortOrder= ''; 
+    handleSubmit()
+  }
+
+  const handleClear = () => {
+    details.searchTerm = '';
+    handleClearFilter();
+    handleSubmit()
+  }
   return (
     <>
       <Modal isModalOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
+        <div className={styles.exitButtonContainer}>
+        <button className={styles.exitButton}  onClick={() => setIsModalOpen(false)}>X</button>
+        </div>
         <Select className={select} placeholder="Select an attribute" value={attribute} onChange={(attribute) => setDetails({...details,attribute})} options={data.attributeOptions} />
         <Select className={select} placeholder="Select a monster card type" value={type} onChange={(type) => setDetails({...details, type })} options={data.typeOptions} />
         <Select className={select} placeholder="Select a race" value={race} onChange={(race) => setDetails({...details,race})} options={data.groupedOptions} formatGroupLabel={formatGroupLabel} />
@@ -54,14 +80,16 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
         </div>
         <Select className={select} placeholder="Sort by" value={sortBy} onChange={(sortBy) => setDetails({...details, sortBy})} options={data.sortByOptions} />
         <Select className={select} placeholder="Sort by" value={sortOrder} onChange={(sortOrder) => setDetails({...details, sortOrder})} options={data.sortOrderOptions} />
-        <button className={button} onClick={handleSubmit}>Filter</button>
-        <button className={button} onClick={() => setIsModalOpen(false)}>Close</button>
+        <button className={styles.modalButton} onClick={handleSubmit}>Apply</button>
+        <button className={styles.modalButton} onClick={handleClearFilter}>Clear Filters</button>        
       </Modal>
       <div className={container}>
         <div className={containerContents}>
           <input className={mainInput} placeholder="Search..." value={searchTerm} onChange={(e) => setDetails({...details, searchTerm: e.target.value })} onKeyPress={onKeyPress} />
           <button className={button} onClick={handleSubmit}>Submit</button>
           <button className={button} onClick={() => setIsModalOpen(true)}>Filters</button>
+          <button className={button} onClick={handleClear}>Clear</button>        
+
         </div>
       </div>
     </>
