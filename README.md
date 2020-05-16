@@ -7,11 +7,11 @@ Potential Upgrades:
 -Add a clear filter option -->
 
 Fixes:
+-add more logic to pagination buttons, possibly get rid of the button if it is not applicable
+-make the card container go back to the top after each search
 <!-- -in modal, if filter is '-' then it will result in card not found page. it also means we won't be able to use the search bar. Maybe add a clear filter button -->
 <!-- -Add a pointer cursor for the buttons -->
 <!-- -differientiate between close and filter button in the filter modal. possibly replace the close button with an 'X' on the top right or make the 'filter' button stand out more as the primary action -->
--add more logic to pagination buttons, possibly get rid of the button if it is not applicable
--
 <!-- - add padding left to modal desktop -->
 <!-- - add filter button on modal -->
 <!-- - Go to top of the page when next page -->
