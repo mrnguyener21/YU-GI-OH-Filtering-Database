@@ -1,27 +1,18 @@
 body {
   margin: 0;
   font-family: 'Roboto Slab', serif;
-  /* background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg');  */
-  background-position: center; 
-  /* background-repeat: no-repeat;  */
-  background-size: cover;
-
- 
 }
-
 
 * {
   box-sizing: border-box;
 } 
 
 .container{
-  /* background-color: rgba(0, 0, 0,0.5) */
   background-color: black;
-
+  height: 100vh;
 }
 .loadingContainer {
-  width: 100vw;
-  height: 100vh;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,12 +22,14 @@ body {
   background-position: center; 
   background-repeat: no-repeat; 
   background-size: cover; 
-  overflow: hidden;
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: none;
+}
+
+body {
+  overflow: none;
 }
 
 ::-webkit-scrollbar {

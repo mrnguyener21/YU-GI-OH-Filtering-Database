@@ -7,8 +7,8 @@ import fetchCards from './api/fetchCards.js';
 
 const App = () => {
   const [cards, setCards] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [hasSearched, setHasSearched] = useState(false);
 
   useEffect(() => {
     (async () => setCards(await fetchCards({})))();
@@ -22,12 +22,21 @@ const App = () => {
   const numberOfPages = Math.ceil(cards.length / cardsPerPage);
 
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber)
+    setCurrentPage(pageNumber);
+
     window.scrollTo(0, 0);
   }
 
-  if(!cards.length && !searchTerm) {
-    return (
+  let LoadingComponent = null;
+
+  if(!cards.length && hasSearched) {
+    LoadingComponent = (
+      <div className={styles.loadingContainer}>
+        <h1 style={{ color: 'white' }}>No cards found.</h1>
+      </div>
+    );
+  } else if(!cards.length) {
+    LoadingComponent = (
       <div className={styles.loadingContainer}>
         <RingLoader size={400} color={"#fff"} loading={true} />
       </div>
@@ -36,18 +45,16 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <Search setCards={setCards} setCurrentPage={setCurrentPage} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      { 
-        !cards.length && searchTerm ? (
-          <div className={styles.loadingContainer}>
-            <h1 style={{color: 'white'}}>Incorrent search term.</h1>
-          </div>
-        ) : (
-          <>
-            <Cards cards={currentCards} />
-            <Pagination numberOfPages={numberOfPages} paginate={paginate} currentPage={currentPage} />
-          </>
-        )
+      <Search setCards={setCards} setCurrentPage={setCurrentPage} setHasSearched={setHasSearched} />
+      {
+        LoadingComponent 
+          ? LoadingComponent
+          : (
+            <>
+              <Cards cards={currentCards} />
+              <Pagination numberOfPages={numberOfPages} paginate={paginate} currentPage={currentPage} />
+            </>
+          )
       }
     </div>
   );
