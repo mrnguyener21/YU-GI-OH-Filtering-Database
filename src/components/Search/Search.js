@@ -58,9 +58,9 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
     handleSubmit()
   }
 
-  const handleClear = () => {
+  const handleClearSearch = () => {
     details.searchTerm = '';
-    handleClearFilter();
+    handleClearFilter()
     handleSubmit()
   }
   return (
@@ -69,10 +69,12 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
         <div className={styles.exitButtonContainer}>
         <button className={styles.exitButton}  onClick={() => setIsModalOpen(false)}>X</button>
         </div>
+        <div className={styles.selectContainer}>
         <Select className={select} placeholder="Select an attribute" value={attribute} onChange={(attribute) => setDetails({...details,attribute})} options={data.attributeOptions} />
         <Select className={select} placeholder="Select a monster card type" value={type} onChange={(type) => setDetails({...details, type })} options={data.typeOptions} />
         <Select className={select} placeholder="Select a race" value={race} onChange={(race) => setDetails({...details,race})} options={data.groupedOptions} formatGroupLabel={formatGroupLabel} />
         <Select className={select} placeholder="Select an archetype" value={archetype} onChange={(archetype) => setDetails({...details,archetype})} options={data.archetypeOptions} />
+        </div>
         <div className={styles.range}>
           <RangeSelect className={styles.range} fromValue={fromAttack} toValue={toAttack} label="Attack" setDetails={setDetails} details={details} />
           <RangeSelect className={styles.range} fromValue={fromDefense} toValue={toDefense} label="Defense" setDetails={setDetails} details={details} />
@@ -86,10 +88,11 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
       <div className={container}>
         <div className={containerContents}>
           <input className={mainInput} placeholder="Search..." value={searchTerm} onChange={(e) => setDetails({...details, searchTerm: e.target.value })} onKeyPress={onKeyPress} />
-          <button className={button} onClick={handleSubmit}>Submit</button>
-          <button className={button} onClick={() => setIsModalOpen(true)}>Filters</button>
-          <button className={button} onClick={handleClear}>Clear</button>        
-
+          <div className={styles.buttonContainer}>
+            <button className={button} onClick={handleSubmit}>Submit</button>
+            <button className={button} onClick={() => setIsModalOpen(true)}>Filters</button>
+            <button className={button} onClick={handleClearSearch}>Clear</button>        
+          </div>
         </div>
       </div>
     </>
