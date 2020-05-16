@@ -17,6 +17,7 @@ Fixes:
 <!-- added favicons and stuff -->
 - disable body scroll when modal open UNFIXED
 - Fix bug when typping gibberish
+-move pagination to the cards
 
 
 Feedback:
@@ -32,3 +33,5 @@ Feedback:
 -make filter button inside button say apply instead of filter, can be seen as more logical
 -possibly provide brief instructions for the filter
 -maybe instead of creating a new fetch call everytime try mapping through the given data 
+- move pagination to cards
+- possibly change heights because they're going to be missaligned then

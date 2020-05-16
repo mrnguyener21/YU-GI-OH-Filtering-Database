@@ -51,8 +51,8 @@ const App = () => {
           ? LoadingComponent
           : (
             <>
-              <Cards cards={currentCards} />
-              <Pagination numberOfPages={numberOfPages} paginate={paginate} currentPage={currentPage} />
+              <Cards cards={currentCards} numberOfPages={numberOfPages} paginate={paginate} currentPage={currentPage}/>
+              {/* <Pagination numberOfPages={numberOfPages} paginate={paginate} currentPage={currentPage} /> */}
             </>
           )
       }

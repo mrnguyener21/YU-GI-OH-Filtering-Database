@@ -33,7 +33,7 @@ const fetchCards = async ({ searchTerm, type, attribute, race, archetype, fromLe
       .filter((card) => (fromLevel || toLevel) ? (card.properties[2].value >= fromLevel) && (card.properties[2].value <= toLevel) : true)
       
     if(sortOrder === 'asc') {
-      filteredCards.reverse();
+      return filteredCards.reverse();
     }
 
     return filteredCards;
