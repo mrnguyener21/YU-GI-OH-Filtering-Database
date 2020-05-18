@@ -44,25 +44,14 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
     setHasSearched(true);
   }
 
-  const handleClearFilter = () =>{
-    //can't seem to destructuring, is it just me?
-    details.attribute= '';
-    details.type= ''; 
-    details.race= ''; 
-    details.archetype= ''; 
-    details.fromLevel= ''; 
-    details.toLevel= ''; 
-    details.fromAttack= ''; 
-    details.toAttack= ''; 
-    details.fromDefense= ''; 
-    details.toDefense= '';
-    details.sortBy= ''; 
-    details.sortOrder= ''; 
+  const handleClearFilter = () =>{ 
+    setDetails({ attribute: '', type: '', race: '', archetype: '', fromLevel: '', toLevel: '', fromAttack: '', toAttack: '', fromDefense: '', toDefense: '', sortBy: '', sortOrder: '', });
+
     handleSubmit()
   }
 
   const handleClearSearch = () => {
-    details.searchTerm = '';
+    setDetails({searchTerm:''});
     handleClearFilter()
     handleSubmit()
   }
