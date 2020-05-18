@@ -1,68 +1,16 @@
-import fetchArchetypes from '../api/fetchArchetype.js';
-
 const attributes = [ 'Dark', 'Earth', 'Fire', 'Light', 'Water', 'Wind', 'Divine' ];
 const types = [ "Effect Monster", "Flip Effect Monster", "Flip Tuner Effect Monster", "Gemini Monster", "Normal Monster", "Normal Tuner Monster", "Pendulum Effect Monster", "Pendulum Flip Effect Monster", "Pendulum Normal Monster", "Pendulum Tuner Effect Monster", "Ritual Effect Monster", "Ritual Monster", "Skill Card", "Spirit Monster", "Toon Monster", "Tuner Monster", "Union Effect Monster", "Fusion Monster", "Link Monster", "Pendulum Effect Fusion Monster", "Synchro Monster", "Synchro Pendulum Effect Monster", "Synchro Tuner Monster", "XYZ Monster", "XYZ Pendulum Effect Monster" ];
 const monsterRaces = ["Aqua", "Beast", "Beast-Warrior", "Creator-God", "Cyberse", "Dinosaur", "Divine-Beast", "Dragon", "Fairy", "Fiend", "Fish", "Insect", "Machine", "Plant", "Psychic", "Pyro", "Reptile", "Rock", "Sea Serpent", "Spellcaster", "Thunder", "Warrior", "Winged Beast"];
 const spellRaces = ["Normal", "Field", "Equip", "Continuous", "Quick-Play", "Ritual"];
 const trapRaces = ["Normal","Continuous","Counter"];
+const archetypes = ["@Ignister","ABC","Abyss Actor","Adamancipator","Aesir","Aether","Alien", "Alligator","Allure Queen","Ally of Justice","Altergeist","Amazoness","Amorphage","Ancient Gear","Ancient Warriors","Angel","Anti","Apoqliphort","Aquaactress","Arcana Force","Archfiend","Armed Dragon","Aroma","Artifact","Assault Mode","Atlantean","B.E.S.","Bamboo Sword","Barbaros","Batteryman","Battleguard","Battlewasp","Battlin' Boxer","Black Luster Soldier","Blackiwng","Blackwing","Blaze Accelerator","Blue-Eyes","Bonding","Boot-Up","Borrel","Bounzer","Bujin","Burning Abyss","Butterfly","Cataclysmic","Celtic Guard","Chaos","Chaos Phantom","Charmer","Chemicritter","Chronomaly","Chrysalis","Cipher","Clear Wing","Cloudian","Codebreaker","Constellar","Crusadia","Crystal Beast","Crystron","Cubic","CXyz","Cyber Angel","Cyber Dragon","Cyberdark","Cyberspace","D.D.","D/D","Danger!","Dark Contract","Dark Magician","Dark Scorpion","Dark World","Darklord","Deep Sea","Demise","Deskbot","Destiny HERO","Destruction Sword","Dice","Dinomist","Dinowrestler","Djinn","Dododo","Doriado","Dracoslayer","Dracoverlord","Dragma","Dragonmaid","Dragunity","Dream Mirror","Duston","Earthbound","Edge Imp","Egyptian God","Eldlich","Elemental HERO","Elemental Lord","Elementsaber","Empowered Warrior","Endymion","Evil Eye","Evil HERO","Evolsaur","Evoltile","Evolzar","Exodia","Eyes Restrict","F.A.","Fabled","Fire Fist","Fire Formation","Fire King","Fishborg","Flamvell","Flower Cardian","Fluffal","Forbidden","Fortune Fairy","Fortune Lady","Fossil","Frightfur","Frog","Fur Hire","Gadget","Gagaga","Gaia The Fierce Knight","Galaxy-Eyes","Gandora","Geargia","Gem-","Generaider","Genex","Ghostrick","Gimmick Puppet","Gishki","Gizmek","Glacial Beast\n Penguin","Glacial Beast","Gladiator Beast","Gogogo","Golden Castle of Stromberg","Golden Land","Gorgonic","Gouki","Gravekeeper's","Graydle","Greed","Grepher","Guardian","Guardragon","Harpie","Hazy","Herald","Heraldic","Heraldry","HERO","Heroic","Hi-Speedroid","Hieratic","Hole","Horus the Black Flame Dragon","Ice Barrier","Igknight","Impcantation","Infernity","Infernoid","Infestation","Infinitrack","Invoked","Inzektor","Iron Chain","Jester","Jinzo","Junk","Jurrac","Kaiju","Karakuri","Knightmare","Koa'ki Meiru","Koala","Kozmo","Krawler","Kuriboh","Laval","Legendary Knight","Lightsworn","Lunalight","Lyrilusc","Machina","Madolche","Magical Musket","Magician","Magnet Warrior","Majespecter","Majestic","Maju","Malefic","Malicevorous","Marincess","Mask","Masked HERO","Mathmech","Mayakashi","Mecha Phantom Beast","Megalith","Mekk-Knight","Meklord","Melodious","Merfae","Mermail","Metalfoes","Metaphys","Mist Valley","Monarch","Morphtronic","Naturia","Nekroz","Nemesys","Neo-Spacian","Nephthys","Nimble","Ninja","Ninjitsu Art","Noble Knight","Nordic","Numeron\r\n","Numeron","Odd-Eyes","of Gusto","Ojama","Onomato","Orcust","Paleozoic","Parasite","Parshath","Pendulum Dragon","Penguin","Performage","Performapal","Phantasm Spiral","Phantom Knights","Photon","Plunder Patroll","Potan","Power Tool","Prank-Kids","Predaplant","Prediction Princess","Priestess","Prophecy","PSY-Frame","Qli","Raidraptor","Red-Eyes","Reptilianne","Resonator","Rikka","Ritual Beast","Roid","Rokket","Roland","Rose","Rose Dragon","Sacred Beast","Salamangreat","Scrap","Secret Six Samurai","Shaddoll","Shark","Shinobird","Shiranui","Silent Magician","Silent Swordsman","Simorgh","Six Samurai","Skull Servant","Sky Striker","Slime","Solemn","Speedroid","Sphinx","Spirit Message","Spiritual Art","SPYRAL","Star Seraph","Starliege","Steelswarm","Stellarknight","Subterror","Super Defense Robot","Super Quant","Superheavy","Supreme King","Sylvan","Symphonic Warrior","T.G.","Tellarknight","Tenyi","The Agent","The Weather","Thunder Dragon","Time Thief","Timelord","Tindangle","Toon","Traptrix","Triamid","Trickstar","True Draco","U.A.","Umbral Horror","Umi","Unchained","Utopia","Valkyrie","Vampire","Vassal","Vendread","Venom","Vision HERO","Void","Volcanic","Vylon","Watt","Wind-Up","Windwitch","Witchcrafter","World Chalice","World Legacy","Worm","X-Saber","Yang Zing","Yosenju","Yubel","Zefra","Zoodiac"];
 
-let archetypeOptions = [];
-(async () => {
-    const archetypes = await fetchArchetypes();
-    
-    archetypes.forEach((archetype) => {archetypeOptions.push({ value: archetype, label: archetype })});
-})()
-
-const monsterOptions = [{ value: '', label: '-' }];
-monsterRaces.forEach((race) => {monsterOptions.push({ value: race, label: race })});
-
-const spellOptions = [];
-spellRaces.forEach((race) => {spellOptions.push({ value: race, label: race })});
-
-const trapOptions = [];
-trapRaces.forEach((race) => {trapOptions.push({ value: race, label: race })});
-
-const sortByOptions = [
-    { value: 'atk', label: 'Attack' },
-    { value: 'def', label: 'Defense' },
-    { value: 'level', label: 'Level' },
-]
-
-const sortOrderOptions = [
-    { value: 'asc', label: 'Ascending' },
-    { value: 'desc', label: 'Descending' },
-]
-
-const groupedOptions = [
-    {
-      label: 'Monster Cards',
-      options: monsterOptions,
-    },
-    {
-      label: 'Spell Cards',
-      options: spellOptions,
-    },
-    {
-      label: 'Trap Cards',
-      options: trapOptions,
-    },
-];
-
-const attributeOptions = [{ value: '', label: '-' }];
-const typeOptions = [{value: '', label: '-'}]
-
-attributes.forEach((attribute) => {attributeOptions.push({ value: attribute, label: attribute })});
-types.forEach((type) => {typeOptions.push({ value: type, label: type })});
-
-
-export default {
-  attributeOptions,
-  typeOptions,
-  monsterOptions,
-  spellOptions,
-  trapOptions,
-  groupedOptions,
-  archetypeOptions,
-  sortByOptions,
-  sortOrderOptions
-};
+export const archetypeOptions = archetypes.map((archetype) => ({ value: archetype, label: archetype }));
+export const attributeOptions = attributes.map((race) => ({ value: race, label: race }));
+export const typeOptions = types.map((race) => ({ value: race, label: race }));
+export const monsterOptions = monsterRaces.map((race) => ({ value: race, label: race }));
+export const spellOptions = spellRaces.map((attribute) => ({ value: attribute, label: attribute }));
+export const trapOptions = trapRaces.map((type) => ({ value: type, label: type }));
+export const sortByOptions = [{ value: 'atk', label: 'Attack' }, { value: 'def', label: 'Defense' }, { value: 'level', label: 'Level' }];
+export const sortOrderOptions = [{ value: 'asc', label: 'Ascending' }, { value: 'desc', label: 'Descending' }];
+export const groupedOptions = [{ label: 'Monster Cards', options: monsterOptions }, { label: 'Spell Cards', options: spellOptions }, { label: 'Trap Cards', options: trapOptions }];

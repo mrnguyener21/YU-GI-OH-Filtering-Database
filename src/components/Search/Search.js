@@ -5,7 +5,7 @@ import { Modal } from '../'
 import RangeSelect from './RangeSelect/RangeSelect';
 
 import fetchCards from '../../api/fetchCards.js';
-import data from '../../data';
+import * as data from '../../data';
 import styles from './Search.module.css';
 
 const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
@@ -15,9 +15,13 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
   const { select, button, container, containerContents, mainInput } = styles;
 
   useEffect(() => {
-    if(!searchTerm) {
-      (async () => setCards(await fetchCards({})))();
+    const setAndFetchCards = async () => {
+      if(!searchTerm) {
+        setCards(await fetchCards({}));
+      }
     }
+
+    setAndFetchCards();
   }, [searchTerm, setCards]);
   
   const formatGroupLabel = data => (
@@ -38,7 +42,6 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
     setCurrentPage(1);
     setIsModalOpen(false);
     setHasSearched(true);
-    console.log(details.attribute)
   }
 
   const handleClearFilter = () =>{
@@ -63,11 +66,12 @@ const Search = ({ setCards, setCurrentPage, setHasSearched }) => {
     handleClearFilter()
     handleSubmit()
   }
+
   return (
     <>
       <Modal isModalOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <div className={styles.exitButtonContainer}>
-        <button className={styles.exitButton}  onClick={() => setIsModalOpen(false)}>X</button>
+          <button className={styles.exitButton}  onClick={() => setIsModalOpen(false)}>X</button>
         </div>
         <div className={styles.selectContainer}>
         <Select className={select} placeholder="Select an attribute" value={attribute} onChange={(attribute) => setDetails({...details,attribute})} options={data.attributeOptions} />

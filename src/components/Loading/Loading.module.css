@@ -1,0 +1,12 @@
+.loadingContainer {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: color;
+    background-image: url('https://wallpapertag.com/wallpaper/full/c/d/3/790278-download-free-hex-grid-wallpaper-1920x1080.jpg'); 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
+  
