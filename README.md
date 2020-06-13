@@ -1,4 +1,4 @@
-https://db.ygoprodeck.com/api-guide/
+<!-- https://db.ygoprodeck.com/api-guide/
 <!-- 
 Potential Upgrades:
 - After the race is selected, if the race is a monster, 'show select a monster card type'
@@ -6,9 +6,9 @@ Potential Upgrades:
 - Possibly add their pagination (&num=30&offset=0)
 -Add a clear filter option -->
 
-Fixes:
+<!-- Fixes:
 -add more logic to pagination buttons, possibly get rid of the button if it is not applicable
--make the card container go back to the top after each search
+-make the card container go back to the top after each search -->
 <!-- -in modal, if filter is '-' then it will result in card not found page. it also means we won't be able to use the search bar. Maybe add a clear filter button -->
 <!-- -Add a pointer cursor for the buttons -->
 <!-- -differientiate between close and filter button in the filter modal. possibly replace the close button with an 'X' on the top right or make the 'filter' button stand out more as the primary action -->
@@ -25,7 +25,7 @@ Fixes:
 <!-- -move pagination to the cards -->
 
 
-Feedback:
+<!-- Feedback:
 -possibly creating a home page and a button to go back to the home page or at least to the first page
 -possibly add a loading indicator after searching so user knows something is happening and data was submitted
 -maybe use outline:focus instead of outline:0 for things such as the search bar for people who are using it without a mouse
@@ -36,4 +36,15 @@ Feedback:
 -possibly provide brief instructions for the filter
 -maybe instead of creating a new fetch call everytime try mapping through the given data 
 - move pagination to cards
-- possibly change heights because they're going to be missaligned then
+- possibly change heights because they're going to be missaligned then --> -->
+this is the markdown for it:
+
+
+
+# YU-GI-OH FILTERING DATABASE
+![YU-GI-OH Filtering Database](https://ibb.co/JyxHKxM)
+
+### [Live Site](https://yugioh-api.netlify.app/)
+
+## Introduction
+This is a the code database for the Yugioh filtering databese.
