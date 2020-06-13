@@ -42,7 +42,7 @@ this is the markdown for it:
 
 
 # YU-GI-OH FILTERING DATABASE
-![YU-GI-OH Filtering Database](https://ibb.co/JyxHKxM)
+![YU-GI-OH Filtering Database](https://i.ibb.co/RBhc9hV/Capture.jpg)
 
 ### [Live Site](https://yugioh-api.netlify.app/)
 

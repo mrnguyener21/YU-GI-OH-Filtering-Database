@@ -3,11 +3,16 @@
     align-items: center;
     justify-content: center;
     height: 10%;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
+    /* border: solid yellow; */
 }
 
 .containerContents {
+    /* border: solid blue; */
     display: flex;
+
+    height: 100%;
+    /* width: 100%; */
     margin-left: 0;
 }
 
@@ -28,7 +33,7 @@
 }
 
 .mainInput {
-    width:90%;
+    /* width:90%; */
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
     margin-bottom: 10%;
@@ -59,10 +64,15 @@
 }
 
 .buttonContainer{
+    /* border: solid red; */
     width:100%;
-    height: 50%;
-    margin-top:5%;
-    padding-left:2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* margin-top:5%; */
+    /* padding-left:2%; */
+    /* padding-bottom: 5%; */
+    padding: 0 0 5% 2%;
 }
 
 .exitButtonContainer{
@@ -147,16 +157,20 @@
     .containerContents {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         /* flex-direction: column; */
-        width: 100%;
+        width: 90%;
         margin-left: 0;
     }
     
     .buttonContainer{
+        /* border: solid red; */
         display: flex;
         justify-content: center;
-        height:20%;
+        align-items: flex-start;
+        height:5%;
+        margin-bottom: 5%;
+        
     }
     
     .button{
